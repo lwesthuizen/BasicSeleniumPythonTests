@@ -9,6 +9,8 @@ import unittest, time, re
 
 class PyTest1(unittest.TestCase):
     def setUp(self):
+        f = open("lodemetode.txt", "w")
+        f.close();
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.google.com/"
